@@ -10,8 +10,8 @@ export enum DataFormatBits
 {
 	R8G8B8A8, R16G16B16A16, R8, R16, R32, R64, R8G8, R16G16, BC4, BC5
 }
-export interface DataFormatRepresentative { signed: boolean, normalized: boolean }
-export interface DataFormat { bits: DataFormatBits, representative: DataFormatRepresentative }
+export interface DataFormatRepresentation { signed: boolean, normalized: boolean }
+export interface DataFormat { bits: DataFormatBits, representation: DataFormatRepresentation }
 export interface AttachmentModeOpts { load: "None" | "Load" | "Clear", store_pixels: boolean }
 
 export type NamedContents<T> = { [key: string]: T };
