@@ -1,0 +1,44 @@
+// Stylesheet
+
+body, div#app, ul, li, a {
+	margin: 0px;
+	user-select: none;
+	-webkit-user-drag: none;
+	cursor: default;
+}
+
+header ul {
+	$separator: solid 1px #ccc;
+	$radius: 4px;
+	display: flex;
+	margin: 0px; padding: 0px;
+	list-style: none; box-sizing: border-box;
+	border-bottom: solid 2px #ccc;
+	font-size: 12px; font-weight: normal;
+	white-space: nowrap;
+	min-width: min-content;
+	overflow: hidden;
+	li a {
+		display: block;
+		padding: 0.6em; padding-left: 0.8em; padding-right: 0.8em;
+		border-right: $separator;
+		text-decoration: none;
+		color: black;
+		cursor: default;
+		text-overflow: ellipsis;
+		border-top-left-radius: $radius;
+		border-top-right-radius: $radius;
+		position: relative;
+		transition: 0.125s ease-out;
+	}
+	li.active a {
+		border-top: solid 2px blue; top: 0px; color: black;
+	}
+	li.inactive a {
+		background-color: #eee; border-top: solid 2px #ccc; position: relative; top: 0.2em; color: #333;
+	}
+	li.inactive a:hover { border-top: solid 2px #aac; }
+}
+#content {
+	transition: 0.5s;
+}
