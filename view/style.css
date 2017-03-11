@@ -1,14 +1,17 @@
 body, div#app, ul, li, a {
   margin: 0px;
+  padding: 0px;
   user-select: none;
   -webkit-user-drag: none;
   cursor: default; }
+
+ul {
+  list-style: none; }
 
 header ul {
   display: flex;
   margin: 0px;
   padding: 0px;
-  list-style: none;
   box-sizing: border-box;
   border-bottom: solid 2px #ccc;
   font-size: 12px;
@@ -45,5 +48,43 @@ header ul {
 
 #content {
   transition: 0.5s; }
+
+#RenderPassEditor {
+  font-size: 10pt;
+  position: fixed;
+  overflow: auto;
+  top: calc(1em + 0.6em * 2 + 1px);
+  bottom: 0px;
+  width: 100%; }
+  #RenderPassEditor #NodeContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto; }
+    #RenderPassEditor #NodeContainer .AttachmentRow {
+      display: flex;
+      flex-flow: row nowrap;
+      margin-bottom: 1.2em;
+      margin-top: 1.2em; }
+      #RenderPassEditor #NodeContainer .AttachmentRow .Attachment {
+        padding: 1.2em;
+        margin-right: 1.2em;
+        border: solid 1px black; }
+      #RenderPassEditor #NodeContainer .AttachmentRow .Attachment:first-of-type {
+        margin-left: 1.2em; }
+    #RenderPassEditor #NodeContainer .ProcessRow {
+      padding: 0.6em;
+      margin-bottom: 1.2em;
+      margin-top: 1.2em;
+      border-radius: 8px;
+      border: solid 1px black; }
+      #RenderPassEditor #NodeContainer .ProcessRow li {
+        line-height: 1.4em; }
+  #RenderPassEditor svg {
+    position: absolute;
+    top: 0px;
+    width: 100%; }
 
 /*# sourceMappingURL=style.css.map */

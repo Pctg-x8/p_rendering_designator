@@ -15,7 +15,7 @@
     "@types/rx": "^4.1.1",
     "electron": "^1.6.1",
     "ts-loader": "2.0.*",
-    "typescript": "2.1.*",
+    "typescript": "~>2.2.0",
     "webpack": "2.2.*"
   },
   "dependencies": {

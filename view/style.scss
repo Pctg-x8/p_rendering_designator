@@ -1,18 +1,19 @@
 // Stylesheet
 
 body, div#app, ul, li, a {
-	margin: 0px;
+	margin: 0px; padding: 0px;
 	user-select: none;
 	-webkit-user-drag: none;
 	cursor: default;
 }
+ul { list-style: none; }
 
 header ul {
 	$separator: solid 1px #ccc;
 	$radius: 4px;
 	display: flex;
 	margin: 0px; padding: 0px;
-	list-style: none; box-sizing: border-box;
+	box-sizing: border-box;
 	border-bottom: solid 2px #ccc;
 	font-size: 12px; font-weight: normal;
 	white-space: nowrap;
@@ -41,4 +42,46 @@ header ul {
 }
 #content {
 	transition: 0.5s;
+}
+#RenderPassEditor {
+	font-size: 10pt;
+	$generic_margin: 1.2em;
+	position: fixed;
+	overflow: auto;
+	top: calc(1em + 0.6em * 2 + 1px);
+	bottom: 0px;
+	width: 100%;
+	#NodeContainer {
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: center;
+		width: max-content;
+		margin-left: auto; margin-right: auto;
+
+		.AttachmentRow
+		{
+			display: flex;
+			flex-flow: row nowrap;
+			margin-bottom: $generic_margin; margin-top: $generic_margin;
+			.Attachment {
+				padding: $generic_margin;
+				margin-right: $generic_margin;
+				border: solid 1px black;
+			}
+			.Attachment:first-of-type { margin-left: $generic_margin; }
+		}
+		.ProcessRow {
+			padding: $generic_margin / 2.0;
+			margin-bottom: $generic_margin; margin-top: $generic_margin;
+			border-radius: 8px;
+			border: solid 1px black;
+
+			li { line-height: 1.4em; }
+		}
+	}
+	svg {
+		position: absolute;
+		top: 0px;
+		width: 100%;
+	}
 }
