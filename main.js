@@ -15,6 +15,7 @@ function GlobalContext() {
 	this.win = null;
 	this.createWindow = function() {
 		this.win = new BrowserWindow({ width: 640, height: 480 });
+		this.win.setMenu(null);
 		console.log("Loading " + index_url);
 		this.win.loadURL(index_url);
 		// this.win.webContents.openDevTools();
