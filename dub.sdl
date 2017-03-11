@@ -1,0 +1,5 @@
+name "rendering_designator"
+description "The Rendering Designator is GUI frontend of Postludium's Device Configuration and Command Assembly"
+authors "S.Percentage"
+copyright "Copyright 2017 S.Percentage"
+license "MIT"
